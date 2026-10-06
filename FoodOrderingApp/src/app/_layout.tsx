@@ -16,5 +16,7 @@ export default function RootLayout() {
     if(error) throw error;
     if(fontsLoaded) SplashScreen.hideAsync();
   },[fontsLoaded,error])
-  return <Stack screenOptions={{headerShown:false}} />;
+  return <Stack screenOptions={{headerShown:false}}>
+  <Stack.Screen name="tabs" />
+  </Stack>;
 }
