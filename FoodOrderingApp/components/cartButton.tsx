@@ -1,11 +1,21 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
+import { images } from '../constant';
 
 const CartButton = () => {
+  const totalItems = 10;
   return (
-    <View>
-      <Text>cartButton</Text>
-    </View>
+    
+    <TouchableOpacity className='cart-btn' onPress={()=>{}}>
+      <Image source={images.bag} className='size-5'
+      resizeMode='contain'/>
+      {/* Agar condition true hai → element show karo.
+      Agar condition false hai → kuch show mat karo. */}
+      {totalItems>0 && (
+      <View className='cart-badge'>
+      <Text className='small-bold text-white'>{totalItems}</Text>
+    </View>)}
+    </TouchableOpacity>
   )
 }
 
