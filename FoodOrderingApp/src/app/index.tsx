@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, FlatList, Pressable, Image, TouchableOpacity } 
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images, offers } from "../../constant";
 import { Fragment } from "react";
-import CartButton from "../../constants/cartButton";
+import CartButton from "../../components/cartButton";
 import cn from 'clsx';//
 
 
